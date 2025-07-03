@@ -1,69 +1,49 @@
-# React + TypeScript + Vite
+# EduPath
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EduPath is a modern educational workflow app built with React, TypeScript, and Vite. It uses [TailwindCSS](https://tailwindcss.com/) for utility-first styling, enhanced with [DaisyUI](https://daisyui.com/) components, and leverages [React Router](https://reactrouter.com/) for client-side routing. Authentication and backend services are powered by [Firebase](https://firebase.google.com/).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Fast development with Vite and Bun
+Styled with TailwindCSS and DaisyUI
+Firebase authentication and backend
+Routing with React Router
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Prerequisites
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [Bun](https://bun.sh/) (v1.0 or higher)
+- [Git](https://git-scm.com/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 2. Setup the Project
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository and install dependencies:
+
+```sh
+git clone <repository-url>
+cd edupath
+bun install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Firebase Configuration
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Obtain your Firebase environment details (API key, project ID, etc.) from the [Firebase Console](https://console.firebase.google.com/).
+2. Create a `.env.local` file in the project root and add your Firebase config variables:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+# Add other required Firebase variables
 ```
+
+## Running the Project
+
+Start the development server:
+
+```sh
+bun run dev
+```
+
+The app will be available at `http://localhost:5173` by default.
