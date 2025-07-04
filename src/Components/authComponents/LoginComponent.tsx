@@ -1,11 +1,23 @@
-import { Link } from "react-router";
+import {  signInWithEmailAndPassword } from "firebase/auth";
+import { Link, useNavigate } from "react-router";
+import { auth } from "../../config/firebaseconfig";
+import { useContext } from "react";
+import authContext from "../../context/authContext";
+
 
 const LoginComponent = () => {
-  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+  const usercontext = useContext(authContext);
+  const navigate = useNavigate();
+  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle login logic here
-    
-    
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log("User logged in:", userCredential.user);
+    usercontext.setUser(userCredential.user);
+    navigate("/dashboard");
   };
   return (
     <div className="login_wrapper bg-green-50 shadow-lg rounded-lg p-6 w-full max-w-md flex flex-col items-center gap-3">
@@ -34,6 +46,7 @@ const LoginComponent = () => {
             type="text"
             required
             placeholder="Username"
+            name="email"
             title="Only letters, numbers or dash"
           />
         </label>
@@ -58,6 +71,7 @@ const LoginComponent = () => {
             type="password"
             required
             placeholder="Password"
+            name="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
           />

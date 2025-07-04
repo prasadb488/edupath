@@ -1,5 +1,5 @@
-import Footer from "./Components/common/Footer"
-import Navbar from "./Components/common/Navbar"
+import Footer from "../Components/common/Footer"
+import Navbar from "../Components/common/Navbar"
 
 function App() {
   return (
@@ -56,7 +56,7 @@ function App() {
               <div className="flex flex-col gap-3">
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
-                  style={{'backgroundImage': 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfDWQxg1eLtYLMGTxxx_Jtu_ABa8SOQzrHXVxrG8V2XmaSkX_e5HTXOyM7tMrfM-6nleQ0cCmpvnFnQTY2q81kjGVPj1FgD0UQfX1QO9KHWDS-uPIWnGjGtqQPBU-vCe4PrZxpw-t8A_6D2ncpdi_fxJa34DMCAka3_XOTmvERYy74XfrmkPDYiyFH3_ZIHC9P-C3LTjP-JZ6O4_78z9RUlvtPe2cNT_90EzZGPhVTiq2HLYGxS_Y63mQFC0ewTQDCBEx8Iek3mfCb");'}}
+                  style={{'backgroundImage': 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfDWQxg1eLtYLMGTxxx_Jtu_ABa8SOQzrHXVxrG8V2XmaSkX_e5HTXOyM7tMrfM-6nleQ0cCmpvnFnQTY2q81kjGVPj1FgD0UQfX1QO9KHWDS-uPIWnGjGtqQPBU-vCe4PrZxpw-t8A_6D2ncpdi_fxJa34DMCAka3_XOTmvERYy74XfrmkPDYiyFH3_ZIHC9P-C3LTjP-JZ6O4_78z9RUlvtPe2cNT_90EzZGPhVTiq2HLYGxS_Y63mQFC0ewTQDCBEx8Iek3mfCb")'}}
                 ></div>
               </div>
               <div className="flex flex-col gap-3">
