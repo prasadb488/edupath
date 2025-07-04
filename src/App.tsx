@@ -1,5 +1,5 @@
-import Footer from "./Components/authComponents/common/Footer"
-import Navbar from "./Components/authComponents/common/Navbar"
+import Footer from "./Components/common/Footer"
+import Navbar from "./Components/common/Navbar"
 
 function App() {
   return (
