@@ -1,7 +1,23 @@
-import { Link } from "react-router";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router";
+import authContext from "../../context/authContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../../config/firebaseconfig";
 
 
 const Navbar = () => {
+  const user = useContext(authContext).user;
+  const setUser = useContext(authContext).setUser;
+  const navigate = useNavigate();
+  const handleSignout = async () => {
+    // Logic to handle signout
+    console.log("User signed out");
+    const logout = await signOut(auth);
+    console.log("Signout successful", logout);
+    setUser(null); 
+    navigate("/login"); 
+
+  };
   return (
   <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
           <div className="flex items-center gap-4 text-[#0e141b]">
@@ -22,9 +38,14 @@ const Navbar = () => {
               <button
                 className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]"
               >
-                <Link to={'/login'}>
+                {
+                  user ?
+                  <span onClick={handleSignout}>Signout</span>
+                  :
+                  <Link to={'/login'}>
                 <span className="truncate">Login / Sign Up</span>
                 </Link>
+                }
               </button>
             </div>
           </div>

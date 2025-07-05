@@ -10,7 +10,6 @@ const LoginComponent = () => {
   const navigate = useNavigate();
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle login logic here
     const formData = new FormData(event.currentTarget);
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
@@ -80,11 +79,20 @@ const LoginComponent = () => {
           Sign In
         </button>
       </form>
+      <div className="wrapper flex flex-col items-center justify-center mt-4">
+
       <div className="text-sm text-gray-600 mt-2">
         Don't have an account?{" "}
         <Link to="/register" className="text-blue-500 hover:underline">
           Register here
         </Link>
+      </div>
+      <div className="text-[.8rem] text-gray-600 mt-2">
+        Forgot your password?{" "}
+        <Link to="/reset-password" className="text-blue-500 hover:underline">
+          Reset it here
+        </Link>
+      </div>
       </div>
     </div>
   );
