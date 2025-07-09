@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router";
 import authContext from "../../context/authContext";
 import { signOut } from "firebase/auth";
@@ -15,9 +15,7 @@ const Navbar = () => {
     setUser(null);
     navigate("/login");
   };
-  useEffect(() => {
-    console.log(user, "user in navbar");
-  }, [user]);
+
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-10 py-3">
       <div className="flex items-center gap-4 text-[#0e141b]">
