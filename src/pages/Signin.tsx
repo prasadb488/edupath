@@ -1,6 +1,10 @@
+import SigninComponent from "../Components/authComponents/SigninComponent"
+
 const Signin = () => {
   return (
-    <div>Signin</div>
+    <div>
+      <SigninComponent/>
+    </div>
   )
 }
 
