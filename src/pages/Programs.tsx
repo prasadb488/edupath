@@ -52,7 +52,7 @@ const Programs = () => {
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAhy89DqAPidg7oREtzHRiSqmNuQDeSNLQF3kufKaLIcJVU6glLjBYvH74-F5npdtLEdOZ80g3J0T-mLb_SXU-ew5jq8fBA7BcpJ-f0foIp6yJybJCosS0WDUqA1FFU1nKxylk48nca4H74_uoC5sITsSfEjLPMsheoYTgrRxDYGnUniT4Jtg0IA3U_lrcIn2AvksiHEaJO-lT8YutXn24QXVdjw1WfA7I3asbmI8eU-47Q2ty6PnYCwqxl5c86XwegfCadEzlYCGNL")',
+                      'url("https://www.iqacademy.ac.za//wp-content/uploads/2021/07/sc-ibm.jpg")',
                   }}
                 ></div>
                 <div>
@@ -70,7 +70,7 @@ const Programs = () => {
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDL6NtGN0-xKsdDUqhk0eHRd59quMPcFYXMZhJEokVeEvkjbtMNeoBJEDE9jM-d2m10yXzNvOtAiwZvVyuoEdAjXZAI9pins8bbN06h9WfkNyDCZKz3BcEnfvyZTAC3f85olx_tsGFt_SyEPMkwzM1tuSCC7gNjBc5_SC-w1st0ppU-N3H4FsnyYrdG3dAG9LeMiuaj0qmLSYri5a9-Ce8_sxA1H8m8zWx5-jFX-h-I49uglNHLuHgXqvGdEaOp6Lqs50MkRsX-XQ1J")',
+                      'url("https://img.wazobia.tech/https://sytbuildr.s3.eu-west-2.amazonaws.com/0406191c-f351-4a58-b164-b9521b3d78c5/SzB3tcglqH5ka2LpdqEFpGNHsgrR91iFhkQ08bQS.jpg?tr=w-1500")',
                   }}
                 ></div>
                 <div>
@@ -88,7 +88,7 @@ const Programs = () => {
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDE3m6wKCOXubCZdyLIV8rDVnz8QATBfOiZEDo5Hx8ZUOJsxjHlvQgmwt4hyGvOH2XCH94k4oTMZpz6oyQ3oe0v65dEfsrdENFQ2HQTZK0YEd7k2aq5gR4BZEx524Y7BafJw3xO_x75VYu3PHzgtI1TRquqbW3LJUX2JsAZ6MlKOOwqqBAbx5xwCHx5vS81wffZGF8_L_psLMg8rGWtvRH2ZrLXYg57g4upDxBhH35NDpZ3-Ny-dtTqPIVpeW0Gt4ei4mCUokSFZiNc")',
+                      'url("https://pixlr.com/blog/wp-content/uploads/2021/04/Beginners-Guide-to-Digital-Art-Design-1170px-x-620px.png")',
                   }}
                 ></div>
                 <div>
@@ -106,7 +106,7 @@ const Programs = () => {
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD50LQSk0C_h_qsVwSShS41SoDEY-COhyI41FOHXRII9pdUE2cvOl3JkMoJ9_PKDAqoQMthrS2dmpM35Q83UQEmCBV797mo5TMIEe3QCFPrb5l8az3VU1uFnRYAoKXwvo_7uzzHYOQp1q4YLijmQu5ft7OO5e3DlPjvUMXu7oUBzjZntx21dyuSREU7du1PbLgsOipwhucvJb1weBo2N8e_zeTv3OMkwm6qKeP_xkA0lZANcVHpGLp4WQeL5p52jHABu9uxEikSFO-O")',
+                      'url("https://www.kgsorkney.com/uploads/1/4/9/3/14935550/editor/6526463.jpg?1615305717")',
                   }}
                 ></div>
                 <div>
@@ -142,7 +142,7 @@ const Programs = () => {
                   className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
                   style={{
                     backgroundImage:
-                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCd8BZm2ne0sZkY5VqlbQ4dLN5jMzEp5u7tLQ32ybY9TJwr-SCoThyQqX49g5VyLBMV9G6YlmyK0_C1IO_ZH1hDuz02mToytXdKXhbN_k2UylRT2iwoRD0YWSOD5oqgpbCysF8uEdduuT9CYnkEQY70mE0s-M065xml6y0A4JBkVQfX6VvhVP4-KFqOsChJkumS2a3BhGLQ306FeHntyAplauWWVsBckw13Xho-PUc9g70hYOSD2sxbJ-cTsoxivGL_tjA94Y1j08zm")',
+                      'url("https://cdn.slidesharecdn.com/ss_thumbnails/creativewritingworkshopbyslidesgo-221114111412-c4900898-thumbnail.jpg?width=640&height=640&fit=bounds")',
                   }}
                 ></div>
                 <div>
@@ -155,74 +155,6 @@ const Programs = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="flex items-center justify-center p-4">
-              <a href="#" className="flex size-10 items-center justify-center">
-                <div
-                  className="text-[#101419]"
-                  data-icon="CaretLeft"
-                  data-size="18px"
-                  data-weight="regular"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18px"
-                    height="18px"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
-                  </svg>
-                </div>
-              </a>
-              <a
-                className="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-[#101419] rounded-full bg-[#e9ecf1]"
-                href="#"
-              >
-                1
-              </a>
-              <a
-                className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#101419] rounded-full"
-                href="#"
-              >
-                2
-              </a>
-              <a
-                className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#101419] rounded-full"
-                href="#"
-              >
-                3
-              </a>
-              <a
-                className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#101419] rounded-full"
-                href="#"
-              >
-                4
-              </a>
-              <a
-                className="text-sm font-normal leading-normal flex size-10 items-center justify-center text-[#101419] rounded-full"
-                href="#"
-              >
-                5
-              </a>
-              <a href="#" className="flex size-10 items-center justify-center">
-                <div
-                  className="text-[#101419]"
-                  data-icon="CaretRight"
-                  data-size="18px"
-                  data-weight="regular"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18px"
-                    height="18px"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
-                  </svg>
-                </div>
-              </a>
             </div>
           </div>
         </div>

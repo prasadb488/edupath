@@ -2,6 +2,7 @@ import Footer from "../Components/common/Footer";
 import data from "../utils/data.json";
 import HomeCardComponet from "../Components/HomePageComponets/HomeCardComponet";
 import type { CourseType } from "../types/CourseType";
+import Carousel from "../Components/HomePageComponets/Carousel";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <div className="layout-container flex h-full grow flex-col">
           <div className="px-40 flex flex-1 justify-center py-5">
             <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
-              <div className="@container">
+              <Carousel />
+
+              {/* <div className="@container">
                 <div className="@[480px]:p-4">
                   <div
                     className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
@@ -35,7 +38,7 @@ function App() {
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <h3 className="text-[#0e141b] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">
                 Trusted by 50+ institutions worldwide
               </h3>
@@ -45,7 +48,7 @@ function App() {
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXtIXfWGjRhAxK-29NG7Ni6VvMVsvUGxeYb11vT_27COshEN9rweyTFhJ4-kHNh46d6HESx2Xgrx2ggdq5mzGuQ_YDesm6AF24btLi2JymTn-Yl4WJJQLpmLwlE7HttN6XGpl7ZeRygVze_ynzwlqXdmA57XuIt4KsAWKrQGJsAnH8EC5xNwZ5aVGOl0zXYvuzjo0vOwaw-qywufyWJzZPOg-5i8eTCLnQzZLZuOK1niPsFVqRMRPZ_AUVhU12qznhOewovdMot2S5")',
+                        'url("https://i.pinimg.com/736x/a4/c1/d6/a4c1d6b57a63155dd2cfd6c025078bae.jpg")',
                     }}
                   ></div>
                 </div>
@@ -54,7 +57,7 @@ function App() {
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-19ndwtCbmjQDBrrsFxf1tbdpneTSuz6iT3QC32x5GkFs7cHomP_lFqYN8aFT1CiLCBg-lEsSmKlWjMcIH8Oi6mjvd6arPF_PPHAf2yv1gb7jyLF1Sqer0FAiJ21Mq_nzdR_mWsGi3Qk0mRqs2sCqeTAGBB1VKqIPaBm9GCmLO2HcAN5ImwVGULcdprFk3zUWYjGIzEEaxgH4FwWXLePYM-aW_-Y2YSxyN2K4L1W050yv8l9iseJP-YcOSWTvUSm2oJpATa_XOEy1")',
+                        'url("https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg/1200px-Indian_Institute_of_Technology_Bombay_Logo.svg.png")',
                     }}
                   ></div>
                 </div>
@@ -63,7 +66,7 @@ function App() {
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAeWOChVPQ7q1uRTDzA6VS8Qn8hsWZO4ajn5-hg0K2g8CWJ-CDlE4u-KEwCYa-hH_ap9diZPxLM23qMhzmuP7OZRq2ONX9wsPDx3EPoNLu04CgpYDSw0DB7wJgOFYyonznekSy0n2yya3A1S5KC0YyHb8zcu-_cb9UowqjGRKQpfXSOrmNmVxu_FaHyG3mO7Ybz1X85bxul6Lajn7TJ_wVHJqfyL2mD-_X7HBOMFHo3yEtidmFHneLzjA1cPNzpiaYvligcoUu97FY1")',
+                        'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOX3d_fkWmqeHwv1x2KIMnrt9Y-KcN8DDVf_XCEgLkofT5-BHejojXtO8oufCgxTVYVVI&usqp=CAU")',
                     }}
                   ></div>
                 </div>
@@ -72,7 +75,7 @@ function App() {
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCfDWQxg1eLtYLMGTxxx_Jtu_ABa8SOQzrHXVxrG8V2XmaSkX_e5HTXOyM7tMrfM-6nleQ0cCmpvnFnQTY2q81kjGVPj1FgD0UQfX1QO9KHWDS-uPIWnGjGtqQPBU-vCe4PrZxpw-t8A_6D2ncpdi_fxJa34DMCAka3_XOTmvERYy74XfrmkPDYiyFH3_ZIHC9P-C3LTjP-JZ6O4_78z9RUlvtPe2cNT_90EzZGPhVTiq2HLYGxS_Y63mQFC0ewTQDCBEx8Iek3mfCb")',
+                        'url("https://i.ytimg.com/vi/LXgktisMdHk/hqdefault.jpg")',
                     }}
                   ></div>
                 </div>
@@ -81,7 +84,7 @@ function App() {
                     className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
                     style={{
                       backgroundImage:
-                        'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXxqCvS15QzUCTDDlccVOQ1WoCsIzC3iauSziB33MsY3IHI4KHh0Ltag-dsAPN1snJevAvjrTQ8JgutvbhjDdK5zr8a1QGcbOnNqRFUld9lJvXPXFRab1XiTgXg_RCs84iIqBldS9EwOX1JsbXiQ-oJ4hNr3aKRWWogsD4aPlwj1skc_ZEb_-c5oFs_x7b2rk9-UY5_JEJNjwaY2vhYSc8SNwaBMnRMYrj-c7-q1mPflzIfIsL5m745h18yTX327sia42rUqRbk552")',
+                        'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs2JoLLmjfdYZ2Twavh6nDP0ooCeayukb0Ww&s")',
                     }}
                   ></div>
                 </div>

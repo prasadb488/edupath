@@ -52,18 +52,6 @@ const Navbar = () => {
           </Link>
           <Link
             className="text-[#0e141b] text-sm font-medium leading-normal"
-            to="/how-it-works"
-          >
-            How It Works
-          </Link>
-          <Link
-            className="text-[#0e141b] text-sm font-medium leading-normal"
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            className="text-[#0e141b] text-sm font-medium leading-normal"
             to="/contact"
           >
             Contact
