@@ -1,14 +1,19 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from "react-router";
 import { auth } from "../../config/firebaseconfig";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import authContext from "../../context/authContext";
+import Loading from "../../pages/Loading";
 
 const LoginComponent = () => {
   const usercontext = useContext(authContext);
   const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
+  usercontext.setLoading(false);
+
+  useEffect(() => {}, [usercontext]);
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    usercontext.setLoading(true);
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const email = formData.get("email") as string;
@@ -21,14 +26,18 @@ const LoginComponent = () => {
       );
       console.log("User logged in:", userCredential.user);
       usercontext.setUser(userCredential.user);
+      usercontext.setLoading(false);
       navigate("/dashboard");
     } catch (error: unknown) {
       console.error("Error during login:", error);
       setError("Failed to login. Please check your credentials.");
+      usercontext.setLoading(false);
       return;
     }
   };
-  return (
+  return usercontext.loading ? (
+    <Loading />
+  ) : (
     <div className="login_wrapper bg-green-50 shadow-lg rounded-lg p-6 w-full max-w-md flex flex-col items-center gap-3">
       {error && (
         <div role="alert" className="alert alert-warning">

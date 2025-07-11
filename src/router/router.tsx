@@ -1,55 +1,47 @@
-import {
-  createBrowserRouter,
-} from "react-router";
-import  App from "../pages/App";
-import Login from "../pages/Login";
+import { createBrowserRouter } from "react-router";
+import App from "../pages/App";
 import NotFound from "../pages/404";
 import PrivateRoute from "./privateroute";
 import Dashboard from "../pages/Dashboard";
-import ResetPassword from "../pages/ResetPassword";
-import Signin from "../pages/Signin";
 import EditProfilePage from "../pages/EditProfilePage";
-
+import Main from "../layout/Main";
+import Authroutes from "./authRoutes/Authroutes";
+import Programs from "../pages/Programs";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
-    
+    element: <Main />,
+    children: [
+      { index: true, element: <App /> },
+      {
+        path: "/dashboard",
+        element: (
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/edit-profile",
+        element: (
+          <PrivateRoute>
+            <EditProfilePage />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/programs",
+        element: <Programs />,
+      },
+    ],
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/reset-password",
-    element: <ResetPassword />,
-  },
-   {
-    path: "/register",
-    element: <Signin />,
-    },
-   {
-    path: "/edit-student-profile",
-    element: (
-      <PrivateRoute>
-        <EditProfilePage />
-      </PrivateRoute>
-    ),
-  },
-  {
-    path: "/dashboard",
-    element: (
-      <PrivateRoute>
-        <Dashboard />
-      </PrivateRoute>
-    ),
-  },
+  ...Authroutes,
+
   {
     path: "*",
     element: <NotFound />,
-  }
-  
+  },
 ]);
 
 export default router;
