@@ -14,6 +14,7 @@ const Navbar = () => {
     console.log("Signout successful", logout);
     setUser(null);
     navigate("/login");
+    return;
   };
 
   return (

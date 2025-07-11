@@ -4,14 +4,15 @@ import { auth, db } from "../../config/firebaseconfig";
 import authContext from "../../context/authContext";
 import { useContext } from "react";
 import { collection, doc, setDoc } from "firebase/firestore";
+import Loading from "../../pages/Loading";
 
 const SigninComponent = () => {
   const navigate = useNavigate();
   const usercontext = useContext(authContext);
-
+  usercontext.setLoading(false);
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
+    usercontext.setLoading(true);
     console.log("Form submitted");
     const formdata = new FormData(event.currentTarget);
 
@@ -21,10 +22,12 @@ const SigninComponent = () => {
     const userType = formdata.get("userType") as string;
     if (!email || !password || !confirmPassword || !userType) {
       alert("Please fill in all fields");
+      usercontext.setLoading(false);
       return;
     }
     if (password !== confirmPassword) {
       alert("Passwords do not match");
+      usercontext.setLoading(false);
       return;
     }
     const signIn = await createUserWithEmailAndPassword(auth, email, password);
@@ -33,6 +36,7 @@ const SigninComponent = () => {
       usercontext.setUser(signIn.user);
     } else {
       console.error("Error signing in:", signIn);
+      usercontext.setLoading(false);
       alert("Error signing in. Please try again.");
     }
 
@@ -45,35 +49,40 @@ const SigninComponent = () => {
         console.log(signIn.user.uid);
 
         const documentRef = doc(collectionRef, signIn.user.uid);
-        const setuser = await setDoc(documentRef, {
+        await setDoc(documentRef, {
           email: email,
           userType: userType,
           isProfileComplete: false,
           createdAt: new Date(),
         });
-        console.log("User document created:", setuser);
-        navigate("/edit-student-profile");
+        usercontext.setLoading(false);
+        console.log("User document created successfully");
+        navigate("/edit-profile");
       } else if (userType === "mentor") {
         const collectionRef = collection(db, "users");
         const documentRef = doc(collectionRef, signIn.user.uid);
-        const setuser = await setDoc(documentRef, {
+        await setDoc(documentRef, {
           email: email,
           userType: userType,
           isProfileComplete: false,
           createdAt: new Date(),
         });
-        console.log("User document created:", setuser);
 
         console.log("User is a mentor");
-
-        navigate("/edit-mentor-profile");
+        usercontext.setLoading(false);
+        console.log("User document created successfully");
+        navigate("/edit-profile");
       }
     } catch (error) {
       console.error("Error navigating to student profile:", error);
+      usercontext.setLoading(false);
+      alert("Failed to create user profile. Please try again.");
     }
   };
 
-  return (
+  return usercontext.loading ? (
+    <Loading />
+  ) : (
     <div className="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden">
       <div className="layout-container flex h-full grow flex-col">
         <div className="px-40 flex flex-1 justify-center py-5">

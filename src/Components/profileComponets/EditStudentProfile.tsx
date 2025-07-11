@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import authContext from "../../context/authContext";
 import supabase from "../../config/suprabaseconfig";
 import { useNavigate } from "react-router";
+import Loading from "../../pages/Loading";
 
 const EditStudentProfile = () => {
   const navigate = useNavigate();
@@ -100,8 +101,10 @@ const EditStudentProfile = () => {
     "Other",
   ];
   const user = useContext(authContext).user;
+  const [loading, setLoading] = useState<boolean>(false);
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     console.log("Form submitted");
+    setLoading(true);
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
@@ -125,6 +128,7 @@ const EditStudentProfile = () => {
       alert("Resume size exceeds 6MB. Please upload a smaller file.");
       return;
     }
+    console.log(resume, "Resume file");
 
     const usercollection = collection(db, "users");
     const userRef = doc(usercollection, user?.uid);
@@ -179,16 +183,22 @@ const EditStudentProfile = () => {
       resume: resumeurl ? resumeurl : null,
       isProfileComplete: true,
     };
+    console.log("Profile Data:", profileData);
+
     try {
       await updateDoc(userRef, profileData);
+      setLoading(false);
       navigate("/dashboard");
     } catch (error) {
       console.error("Error updating profile:", error);
       alert("Failed to update profile. Please try again.");
+      setLoading(false);
       return;
     }
   };
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <div>
       <div
         className="relative flex size-full min-h-screen flex-col bg-[#f8f9fb] group/design-root overflow-x-hidden"
