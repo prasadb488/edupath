@@ -7,6 +7,7 @@ import EditProfilePage from "../pages/EditProfilePage";
 import Main from "../layout/Main";
 import Authroutes from "./authRoutes/Authroutes";
 import Programs from "../pages/Programs";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
         path: "/programs",
         element: <Programs />,
       },
+      {
+        path: "/Contact",
+        element: <Contact />,
+      },
+
     ],
   },
   ...Authroutes,
