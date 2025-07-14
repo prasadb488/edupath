@@ -8,6 +8,10 @@ import Main from "../layout/Main";
 import Authroutes from "./authRoutes/Authroutes";
 import Programs from "../pages/Programs";
 import Contact from "../pages/Contact";
+import Applyprogram from "../pages/Applyprogram";
+import ApplyprogramFrom from "../pages/ApplyprogramFrom";
+import Success from "../pages/Success";
+import Approvals from "../pages/Approvals";
 
 const router = createBrowserRouter([
   {
@@ -33,13 +37,49 @@ const router = createBrowserRouter([
       },
       {
         path: "/programs",
-        element: <Programs />,
+
+        element: (
+          <PrivateRoute>
+            <Programs />
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/Contact",
+        path: "/programs/:id",
+        element: (
+          <PrivateRoute>
+            <Applyprogram />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/apply/:id",
+        element: (
+          <PrivateRoute>
+            <ApplyprogramFrom />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/success",
+        element: (
+          <PrivateRoute>
+            <Success />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/approvals",
+        element: (
+          <PrivateRoute>
+            <Approvals />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/contact",
         element: <Contact />,
       },
-
     ],
   },
   ...Authroutes,

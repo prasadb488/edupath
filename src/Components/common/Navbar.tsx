@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router";
 import authContext from "../../context/authContext";
 import { signOut } from "firebase/auth";
@@ -7,6 +7,11 @@ import { auth } from "../../config/firebaseconfig";
 const Navbar = () => {
   const user = useContext(authContext).user;
   const setUser = useContext(authContext).setUser;
+  const loading = useContext(authContext).loading;
+  useEffect(() => {
+    console.log(loading);
+  }, [loading]);
+
   const navigate = useNavigate();
   const handleSignout = async () => {
     console.log("User signed out");
@@ -59,7 +64,9 @@ const Navbar = () => {
         </div>
         <div className="flex gap-2">
           <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#e7edf3] text-[#0e141b] text-sm font-bold leading-normal tracking-[0.015em]">
-            {user ? (
+            {loading ? (
+              <span className="animate-pulse">Loading...</span>
+            ) : user ? (
               <span onClick={handleSignout}>Signout</span>
             ) : (
               <Link to={"/login"}>

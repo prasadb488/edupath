@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Business Management",
+    "description": "Learn the basics of business management, including strategy, marketing, and finance.",
+    "image": "https://www.iqacademy.ac.za//wp-content/uploads/2021/07/sc-ibm.jpg",
+    "category": "Business",
+    "instructor": "Dr. Amanda Blake",
+    "duration": "8 Weeks",
+    "startDate": "August 1, 2025",
+    "delivery": "Online / Instructor-led",
+    "prerequisites": "None",
+    "prerequisitesDetails": "No prior experience needed. Basic English and math proficiency recommended.",
+    "fullDescription": "This course provides a foundational understanding of business management. You'll explore concepts in strategy, operations, marketing, and finance with real-world case studies and simulations.",
+    "learningOutcomes": [
+      "Understand business structures and management functions",
+      "Apply basic marketing and financial principles",
+      "Develop strategic planning skills",
+      "Analyze real-world business case studies"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Fundamentals of Software Development",
+    "description": "Master the fundamentals of software development, including programming and data structures.",
+    "image": "https://img.wazobia.tech/https://sytbuildr.s3.eu-west-2.amazonaws.com/0406191c-f351-4a58-b164-b9521b3d78c5/SzB3tcglqH5ka2LpdqEFpGNHsgrR91iFhkQ08bQS.jpg?tr=w-1500",
+    "category": "Technology",
+    "instructor": "James Lee",
+    "duration": "10 Weeks",
+    "startDate": "August 10, 2025",
+    "delivery": "Online / Self-paced",
+    "prerequisites": "Basic computer knowledge",
+    "prerequisitesDetails": "Familiarity with file systems and internet browsing is helpful.",
+    "fullDescription": "An introduction to software development using modern programming languages and concepts. You'll gain a solid foundation in algorithms, data structures, and debugging techniques.",
+    "learningOutcomes": [
+      "Write programs using core syntax and data structures",
+      "Apply control flow and functions",
+      "Use version control systems (Git)",
+      "Understand basic object-oriented concepts"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Digital Art and Design Basics",
+    "description": "Explore the basics of digital art and design, including graphic design and illustration.",
+    "image": "https://pixlr.com/blog/wp-content/uploads/2021/04/Beginners-Guide-to-Digital-Art-Design-1170px-x-620px.png",
+    "category": "Arts",
+    "instructor": "Ella Martínez",
+    "duration": "6 Weeks",
+    "startDate": "July 22, 2025",
+    "delivery": "Online / Project-based",
+    "prerequisites": "None",
+    "prerequisitesDetails": "No prior experience in art or design is required.",
+    "fullDescription": "A hands-on course teaching the principles of design, composition, and digital illustration. Perfect for beginners looking to start a career in digital arts.",
+    "learningOutcomes": [
+      "Use digital tools to create artwork",
+      "Understand the principles of visual composition",
+      "Apply color theory in design",
+      "Create a basic portfolio"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Advanced Biology Concepts",
+    "description": "Dive into advanced biology concepts, including genetics and molecular biology.",
+    "image": "https://www.kgsorkney.com/uploads/1/4/9/3/14935550/editor/6526463.jpg?1615305717",
+    "category": "Science",
+    "instructor": "Dr. Ravi Patel",
+    "duration": "12 Weeks",
+    "startDate": "September 2, 2025",
+    "delivery": "Hybrid / In-person + Online",
+    "prerequisites": "Basic biology",
+    "prerequisitesDetails": "Prior completion of an introductory biology course is recommended.",
+    "fullDescription": "Explore cell biology, genetics, and molecular systems in this intensive biology course designed for advanced high school or early college students.",
+    "learningOutcomes": [
+      "Understand DNA replication and protein synthesis",
+      "Analyze genetic inheritance and mutations",
+      "Use lab simulations to model experiments",
+      "Interpret scientific literature in biology"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Healthcare Management Essentials",
+    "description": "Understand the essentials of healthcare management, including operations and finance.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB5puWpZf-arxe1KpWOicG7sPIwqCNB51OwvPZnajYGpDJ0DnXsbjcJMP-lpbDIjpQeVVTXII2QSECWqEtKPi9aMdAw3n4R1ekb0tODg-xhjAda2kMbNAlEX7-mINnaG2CiODwPqbqJkqZxXXFpd__8OBPkdXVM0Y9-EX_jQUJy-GiAsPFFWQIaAOfe2cpgLcWzZ6W3faekdnCSc5UU3AMkOVeZOvzdD_Yn15Fw-o-YyyZH509g1XrKWRCbKHPlKalRQXs3SY6JNWgu",
+    "category": "Health",
+    "instructor": "Dr. Jennifer Moore",
+    "duration": "8 Weeks",
+    "startDate": "July 25, 2025",
+    "delivery": "Online / Live Sessions",
+    "prerequisites": "None",
+    "prerequisitesDetails": "Open to all learners. No prior healthcare knowledge needed.",
+    "fullDescription": "Gain an understanding of how hospitals, clinics, and healthcare organizations operate. The course includes healthcare systems, budgeting, patient safety, and leadership.",
+    "learningOutcomes": [
+      "Explain healthcare delivery models",
+      "Analyze budgeting and finance in healthcare",
+      "Understand patient care quality standards",
+      "Apply leadership principles in healthcare settings"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Creative Writing Workshop",
+    "description": "Develop your creative writing skills through workshops and feedback sessions.",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/creativewritingworkshopbyslidesgo-221114111412-c4900898-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "category": "Arts",
+    "instructor": "Prof. Maya Ray",
+    "duration": "6 Weeks",
+    "startDate": "August 8, 2025",
+    "delivery": "Online / Interactive",
+    "prerequisites": "None",
+    "prerequisitesDetails": "Suitable for beginners. A passion for writing is helpful.",
+    "fullDescription": "This course focuses on writing fiction and poetry. Engage in weekly writing prompts, feedback circles, and learn how to revise and refine your writing.",
+    "learningOutcomes": [
+      "Write short stories and poems",
+      "Apply literary techniques like metaphor and pacing",
+      "Critique and revise written work",
+      "Build a writer’s portfolio"
+    ]
+  }
+]
