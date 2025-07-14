@@ -1,7 +1,7 @@
 import Footer from "../Components/common/Footer";
 import data from "../utils/data.json";
 import HomeCardComponet from "../Components/HomePageComponets/HomeCardComponet";
-import type { CourseType } from "../types/CourseType";
+import type { CourseType } from "../types/Types";
 import Carousel from "../Components/HomePageComponets/Carousel";
 
 function App() {

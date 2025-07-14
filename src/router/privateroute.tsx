@@ -20,17 +20,17 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
       return;
     }
     if (user) {
-      authuser.setLoading(false);
       const userData = await getUser(user.uid);
       if (userData) {
         if (
           !userData.isProfileComplete &&
           window.location.pathname !== "/edit-profile"
         ) {
-          // If the user profile is not complete, redirect to edit profile page
           navigate("/edit-profile");
+          authuser.setLoading(false);
         } else {
-          authuser.setUser({ ...user, ...userData });
+          authuser.setUser({ ...user });
+          authuser.setLoading(false);
         }
       } else {
         console.error("User data not found for UID:", user.uid);
